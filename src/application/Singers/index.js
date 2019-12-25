@@ -31,7 +31,9 @@ function Singers (props) {
   const { getHotSingerDispatch, updateDispatch, pullDownRefreshDispatch, pullUpRefreshDispatch } = props;
 
   useEffect(() => {
-    getHotSingerDispatch();
+    if (!singerList.size) {
+      getHotSingerDispatch();
+    }
     // eslint-disable-next-line
   }, []);
 
