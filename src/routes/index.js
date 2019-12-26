@@ -21,7 +21,7 @@ export default [
       {
         path: "/recommend",
         component: Recommend,
-        children: [
+        routes: [
           {
             path: "/recommend/:id",
             component: Album
