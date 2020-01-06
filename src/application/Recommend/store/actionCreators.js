@@ -9,7 +9,7 @@ export const changeBannerList = (data) => ({
 
 export const changeRecommendList = (data) => ({
   type: actionTypes.CHANGE_RECOMMEND_LIST,
-  data: fromJS (data)
+  data: fromJS(data)
 });
 
 export const changeEnterLoading = (data) => ({
@@ -19,21 +19,22 @@ export const changeEnterLoading = (data) => ({
 
 export const getBannerList = () => {
   return (dispatch) => {
-    getBannerRequest ().then(data => {
-      dispatch (changeBannerList (data.banners));
-    }).catch (() => {
-      console.log ("轮播图数据传输错误");
-    })
+    getBannerRequest().then(data => {
+      const action = changeBannerList(data.banners);
+      dispatch(action);
+    }).catch(() => {
+      console.log("轮播图数据传输错误");
+    }) 
   }
-}
+};
 
 export const getRecommendList = () => {
   return (dispatch) => {
-    getRecommendListRequest ().then (data => {
-      dispatch (changeRecommendList (data.result));
-      dispatch (changeEnterLoading (false));
-    }).catch (() => {
-      console.log ("推荐歌单数据传输错误");
+    getRecommendListRequest().then(data => {
+      dispatch(changeRecommendList(data.result));
+      dispatch(changeEnterLoading(false));
+    }).catch(() => {
+      console.log("推荐歌单数据传输错误");
     });
   }
 };

@@ -15,7 +15,7 @@ export const Top = styled.div`
       font-size: 25px;
     }
   }
-`
+`;
 
 export const Tab = styled.div`
   height: 44px;
@@ -23,13 +23,13 @@ export const Tab = styled.div`
   flex-direction: row;
   justify-content: space-around;
   background: ${style["theme-color"]};
-  a {
+  a{
     flex: 1;
     padding: 2px 0;
     font-size: 14px;
     color: #e4e4e4;
-    &.selected {
-      span {
+    &.selected{
+      span{
         padding: 3px 0;
         font-weight: 700;
         color: #f1f1f1;
@@ -37,11 +37,12 @@ export const Tab = styled.div`
       }
     }
   }
-`
+`;
+
 export const TabItem = styled.div`
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-`
+`;
